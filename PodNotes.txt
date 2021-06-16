@@ -1,0 +1,21 @@
+
+Podman
+Images created by Podman are compatible with other container management tools. 
+
+	The images created by Podman adhere to OCI standard, 
+	and hence they can be pushed to other container registries like Docker Hub
+
+It can be run as a normal user without requiring root privileges. 
+	When running as a non-root user, Podman creates a user namespace inside which it acquires the root permission. This allows it to mount file systems and setup required containers
+
+It provides the ability to manage pods. 
+	Unlike the other container runtime tools, Podman lets the user manage pods (a group of one or more containers that operate together). Users can perform operations like create, list, inspect on the pods
+
+
+Limitations to Podman:
+
+It only runs on Linux based systems. 
+	Currently, Podman only runs on Linux-based operating systems and doesn't have a wrapper for Windows and macOS.
+There is no alternative for Docker Compose. 
+	Podman doesn't have support for managing multiple containers locally, similar to what Docker Compose does. An implementation of Docker Compose using the Podman backend is being developed as part of the podman-compose project, but this is still work in progress.
+
